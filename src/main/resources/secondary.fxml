@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="518.0" prefWidth="846.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SecondaryController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Pane prefHeight="293.0" prefWidth="169.0">
+         <children>
+            <BarChart fx:id="barChart" layoutX="413.0" layoutY="-5.0" maxWidth="441.0" prefHeight="319.0" prefWidth="393.0" title="Number">
+              <xAxis>
+                <CategoryAxis label="Table order" side="BOTTOM" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" label="Numerical value" side="LEFT">
+                     <tickLabelFont>
+                        <Font name="Times New Roman" size="10.0" />
+                     </tickLabelFont></NumberAxis>
+              </yAxis>
+            </BarChart>
+            <TableView fx:id="tableView" layoutX="291.0" layoutY="-1.0" maxWidth="166.0" prefHeight="293.0" prefWidth="112.0">
+               <columns>
+                  <TableColumn fx:id="numCol" editable="false" prefWidth="110.0" text="Number" />
+               </columns></TableView>
+            <Button fx:id="passButton" layoutX="163.0" layoutY="62.0" mnemonicParsing="false" onAction="#singlePass" text="Single pass">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font></Button>
+            <Button fx:id="autoSortButton" layoutX="185.0" layoutY="254.0" mnemonicParsing="false" onAction="#autoSort" text="Auto Sort">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font></Button>
+            <Button fx:id="randButton" layoutX="23.0" layoutY="254.0" mnemonicParsing="false" onAction="#randomize" text="Randomize numbers">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font></Button>
+            <Button fx:id="inputButton" layoutX="163.0" layoutY="210.0" mnemonicParsing="false" onAction="#numIn" prefHeight="23.0" prefWidth="112.0" text="Generate new list">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font></Button>
+            <TextField fx:id="numInTextField" layoutX="-4.0" layoutY="210.0" prefHeight="23.0" prefWidth="167.0" promptText="Number of numbers">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </TextField>
+            <MenuButton fx:id="chooseSortButton" layoutX="58.0" layoutY="14.0" mnemonicParsing="false" text="Choose Sorting Algorithm">
+              <items>
+                <MenuItem fx:id="bubbleSort" mnemonicParsing="false" onAction="#setBubbleMode" text="Bubble Sort" />
+                <MenuItem fx:id="mergeSort" mnemonicParsing="false" onAction="#setMergeMode" text="Merge Sort" />
+              </items>
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </MenuButton>
+            <Button fx:id="stepButton" layoutX="48.0" layoutY="62.0" mnemonicParsing="false" onAction="#singleStep" text="Single step">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font></Button>
+            <Button fx:id="sortAllButton" layoutX="117.0" layoutY="105.0" mnemonicParsing="false" onAction="#sortAll" text="Sort all">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Text boundsType="VISUAL" fill="#323232" layoutX="23.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start by selecting a sorting algorithm and generating a list however long you want below!" textAlignment="CENTER" wrappingWidth="251.6748046875">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button fx:id="backButton" mnemonicParsing="false" onAction="#switchToPrimary" text="Back">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="endButton" mnemonicParsing="false" onAction="#endProgram" text="End Program">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Button>
+        </buttons>
+      </ButtonBar>
+   </children>
+</VBox>

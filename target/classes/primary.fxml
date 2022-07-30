@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="518.0" prefWidth="846.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PrimaryController">
+   <children>
+      <Label focusTraversable="false" text="Sorting Program">
+         <font>
+            <Font name="Times New Roman" size="42.0" />
+         </font></Label>
+      <TextArea editable="false" focusTraversable="false" prefHeight="75.0" prefWidth="806.0" text="This is a program that demonstrates different sorting algorithms. The program walks through the algorithm  steps by steps in a clear and intuitive way. It visualizes the process of sorting though a table of numbers and a chart. Users can customize the setting and choose different way for the program to demonstrate the process of sorting." wrapText="true">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="startButton" onAction="#switchToSecondary" text="Start">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></Button>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
